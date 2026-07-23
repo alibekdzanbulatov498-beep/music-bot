@@ -1,8 +1,12 @@
-from telegram import Update
-from telegram.ext import ApplicationBuilder, MessageHandler, ContextTypes, filters
-import requests
+import os
+import asyncio
+import random
 
-TOKEN = 8867639105:AAGlPoaPjC5LLWZz_1dzOguT_eQhO9Lz0fs
+from aiogram import Bot, Dispatcher
+from aiogram.filters import CommandStart
+from aiogram.types import Message
+
+TOKEN = os.getenv("8870694306:AAFmVW4WSXgjoz2H2KIPlApPPkYGD5rcFsY")
 
 async def search(update: Update, context: ContextTypes.DEFAULT_TYPE):
     query = update.message.text
